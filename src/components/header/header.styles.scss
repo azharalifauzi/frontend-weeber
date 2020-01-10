@@ -1,0 +1,39 @@
+.navbar {
+  transition: all .3s ease-out;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  &.scrolled {
+    background-color: #eeeeee;
+    z-index: 999;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+  }
+  .container {
+    padding: 10px 15px;
+  }
+}
+
+.navbar-brand {
+  max-width: 130px;
+}
+
+.navbar-nav {
+  .nav-link {
+    text-transform: uppercase;
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #eeeeee !important;
+    font-weight: 600;
+    padding: 10px 15px !important;
+
+    &.scrolled-link {
+      color: #24425a !important;
+    }
+
+    &:hover {
+      color: darken(#eeeeee, 20%) !important;
+    }
+  }
+}

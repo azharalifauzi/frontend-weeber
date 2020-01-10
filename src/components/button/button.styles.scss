@@ -1,0 +1,18 @@
+.btn {
+  max-width: 200px;
+  color: #eeeeee;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Helvetica', sans-serif;
+  padding: 10px 32px;
+  letter-spacing: 1px;
+}
+
+.btn-dark-blue {
+  background-color: #24425a;
+
+  &:hover {
+    background-color: darken(#24425a, 10%);
+    color: #eeeeee;
+  }
+}
