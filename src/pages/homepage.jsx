@@ -7,15 +7,15 @@ import Team from '../components/team/team.component';
 import Footer from '../components/footer/footer.component';
 
 const HomePage = () => {
-  const home = useRef(null);
+  const home = useRef();
   const product = useRef();
   const team = useRef();
   const contactUs = useRef();
 
   const onHomeFocus = () => window.scrollTo({top: home.current.offsetTop, behavior: 'smooth'});
-  const onProductFocus = () => window.scrollTo({top: product.current.offsetTop, behavior: 'smooth'});
-  const onTeamFocus = () => window.scrollTo({top: team.current.offsetTop, behavior: 'smooth'});
-  const onContactUsFocus = () => window.scrollTo({top: contactUs.current.offsetTop, behavior: 'smooth'});
+  const onProductFocus = () => window.scrollTo({top: product.current.offsetTop-76.75, behavior: 'smooth'});
+  const onTeamFocus = () => window.scrollTo({top: team.current.offsetTop-76.75, behavior: 'smooth'});
+  const onContactUsFocus = () => window.scrollTo({top: contactUs.current.offsetTop-76.75, behavior: 'smooth'});
 
   return (
   <Fragment>

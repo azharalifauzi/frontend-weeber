@@ -9,11 +9,13 @@
   .container {
     .row {
       margin-top: 150px;
+      position: relative;
       .intro-info {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        z-index: 2;
         .intro-text {
           h2 {
             font-size: 34px;
@@ -44,5 +46,16 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-info {
+    margin-top: 75px;
+  }
+
+  .intro-img {
+    position: absolute;
+    top: 200px;
   }
 }

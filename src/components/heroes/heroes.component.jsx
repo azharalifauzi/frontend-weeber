@@ -11,7 +11,7 @@ const Heroes = ({home}) => (
       <div className="row justify-content-center align-self-center">
         <div className="col-md-6 intro-info order-md-first order-last">
           <div className='intro-text'>
-            <h2>We provide web<br/> services<br/>for your needs</h2>
+            <h2>We provide web services<br/>for your needs</h2>
           </div>
           <div className='button mt-4'>
             <Button color='btn-dark-blue'>Get Started</Button>

@@ -8,17 +8,16 @@ import './header.styles.scss';
 
 class Header extends React.Component {
   state = {
-    isScroll : false
+    isScroll : false,
+    isHidden : true
   }
 
   componentDidMount() {
     window.addEventListener('scroll', () => {
       const isScroll = window.scrollY > 50;
       if (isScroll) {
-        document.getElementById("nav").classList.add("scrolled");
         this.setState({isScroll: true})
       } else {
-        document.getElementById("nav").classList.remove("scrolled");
         this.setState({isScroll: false})
       }
     });
@@ -27,29 +26,33 @@ class Header extends React.Component {
   componentWillUnmount() {
     window.removeEventListner('scroll');
   }
+
+  navbarToggler = () => {
+    this.setState({isHidden: !this.state.isHidden})
+  }
   render() {
-    const { isScroll } = this.state;
+    const { isScroll, isHidden } = this.state;
     const { onHomeFocus, onProductFocus, onTeamFocus, onContactUsFocus } = this.props;
     return(
-      <nav id='nav' className="navbar navbar-expand-lg navbar-light">
+      <nav id='nav' className={`navbar navbar-expand-lg navbar-light ${isScroll ? "scrolled" : null} ${isHidden ? null : 'show'}`}>
         <div className='container'>
           <img className='navbar-brand' src={Logo} alt='Weeber Logo' />
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <FontAwesomeIcon className={`${isScroll ? "scrolled-icon" : null}`} icon='bars' />
+          <button onClick={this.navbarToggler} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <FontAwesomeIcon className={`${isScroll ? "scrolled-icon" : null} ${isHidden ? null : 'show'}`} icon='bars' />
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className={`navbar-hidden ${isHidden ? null : 'show'}`} id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className='nav-item active'>
-                <span onClick={onHomeFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null}`} >Home <span className="sr-only">(current)</span></span>
+                <span onClick={onHomeFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null} ${isHidden ? null : 'show'}`} >Home <span className="sr-only">(current)</span></span>
               </li>
               <li className="nav-item">
-                <span onClick={onProductFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null}`} >Product</span>
+                <span onClick={onProductFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null} ${isHidden ? null : 'show'}`} >Product</span>
               </li>
               <li className="nav-item">
-                <span onClick={onTeamFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null}`} >Team</span>
+                <span onClick={onTeamFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null} ${isHidden ? null : 'show'}`} >Team</span>
               </li>
               <li className="nav-item">
-                <span onClick={onContactUsFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null}`} >Contact Us</span>
+                <span onClick={onContactUsFocus} className={`nav-link active ${isScroll ? "scrolled-link" : null} ${isHidden ? null : 'show'}`} >Contact Us</span>
               </li>
             </ul>
           </div>
