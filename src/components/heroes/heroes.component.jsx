@@ -5,11 +5,11 @@ import Button from '../button/button.component';
 
 import './heroes.styles.scss';
 
-const Heroes = () => (
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-      <div class="row justify-content-center align-self-center">
-        <div class="col-md-6 intro-info order-md-first order-last">
+const Heroes = ({home}) => (
+  <div ref={home} className="jumbotron jumbotron-fluid">
+  <div className="container">
+      <div className="row justify-content-center align-self-center">
+        <div className="col-md-6 intro-info order-md-first order-last">
           <div className='intro-text'>
             <h2>We provide web<br/> services<br/>for your needs</h2>
           </div>
@@ -18,8 +18,8 @@ const Heroes = () => (
           </div>
         </div>
 
-        <div class="col-md-6 intro-img order-md-last order-first">
-          <img src={People} alt="" class="img-fluid" />
+        <div className="col-md-6 intro-img order-md-last order-first">
+          <img src={People} alt="" className="img-fluid" />
         </div>
       </div>
   </div>

@@ -4,8 +4,12 @@
   text-transform: uppercase;
   font-weight: 600;
   font-family: 'Helvetica', sans-serif;
-  padding: 10px 32px;
+  padding: 10px 24px;
   letter-spacing: 1px;
+
+  &.form {
+    font-weight: 300;
+  }
 }
 
 .btn-dark-blue {

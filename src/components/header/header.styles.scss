@@ -2,7 +2,7 @@
   transition: all .3s ease-out;
   position: fixed;
   left: 0;
-  top: 0;
+  top: -5px;
   right: 0;
   &.scrolled {
     background-color: #eeeeee;
@@ -11,6 +11,19 @@
   }
   .container {
     padding: 10px 15px;
+
+    .navbar-toggler {
+      border: none;
+
+      svg {
+        color: #eeeeee;
+        transform: scale(1.2);
+
+        &.scrolled-icon {
+          color: #24425a;
+        }
+      }
+    }
   }
 }
 
@@ -27,6 +40,7 @@
     color: #eeeeee !important;
     font-weight: 600;
     padding: 10px 15px !important;
+    cursor: pointer;
 
     &.scrolled-link {
       color: #24425a !important;

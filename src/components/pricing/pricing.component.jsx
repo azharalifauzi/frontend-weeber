@@ -4,8 +4,8 @@ import PricingPlan from '../pricing-plan/pricing-plan.component';
 
 import './pricing.styles.scss';
 
-const Pricing = () => (
-  <div className='pricing'>
+const Pricing = ({product}) => (
+  <div ref={product} className='pricing'>
     <div className='container'>
       <div className='section-header'>
         <h3>Our Solutions</h3>

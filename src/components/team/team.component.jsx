@@ -13,35 +13,39 @@ const teams = [
   {
     name: 'Aristia Reyhan',
     role: 'UI Designer',
-    imgUrl: Aristia
+    imgUrl: Aristia,
+    id: 1
   },
   {
     name: 'Bayu Aditya',
     role: 'Backend Developer',
-    imgUrl: Bayu
+    imgUrl: Bayu,
+    id: 2
   },
   {
     name: 'Zhorif Maulana',
     role: 'Frontend Developer',
-    imgUrl: Zhorif
+    imgUrl: Zhorif,
+    id: 3
   },
   {
     name: 'Azhar Ali Fauzi',
     role: 'Frontend Developer',
-    imgUrl: Ali
+    imgUrl: Ali,
+    id: 4
   },
 ]
 
-const Team = () => (
-  <div className='team'>
+const Team = ({ team }) => (
+  <div ref={team} className='team'>
     <div className='container'>
       <div className='section-header'>
         <h3>Meet Our Team</h3>
         <p>Our team consists of several people who are experienced in organizations and web development.</p>
       </div>
       <div className='row'>
-        {teams.map(({name, role, imgUrl}) => (
-          <TeamCard name={name} role={role} imgUrl={imgUrl} key={name}  />
+        {teams.map(({id, ...teamProps}) => (
+          <TeamCard {...teamProps} key={id}  />
         ))}
       </div>
     </div>

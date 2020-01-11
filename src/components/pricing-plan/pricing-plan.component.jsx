@@ -5,13 +5,13 @@ import Button from '../button/button.component';
 import './pricing-plan.styles.scss';
 
 const PricingPlan = ({name, price}) => (
-    <div class="col-xs-12 col-lg-4">
-      <div class="card">
-        <div class="card-header">
-          <h3><span class="currency">Rp.</span>{price}<span class="period">/month</span></h3>
+    <div className="col-xs-12 col-lg-4">
+      <div className="card">
+        <div className="card-header">
+          <h3><span className="currency">Rp.</span>{price}<span className="period">/month</span></h3>
         </div>
-        <div class="card-block">
-          <h4 class="card-title">
+        <div className="card-block">
+          <h4 className="card-title">
             {name}
           </h4>
           <Button color='btn-dark-blue'>Details</Button>

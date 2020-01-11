@@ -1,0 +1,22 @@
+import React, { Fragment } from 'react';
+
+import ContactInfo from '../contact-info/contact-info.component';
+import ContactForm from '../contact-form/contact-form.component';
+
+import './footer.styles.scss';
+
+const Footer = ({ contactUs }) => (
+  <Fragment>
+    <div ref={contactUs} className='footer'>
+      <div className='container'>
+        <div className='footer-items'>
+          <ContactInfo />
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+    <p className='copyright'>Designed by <span>Weeber Web Development Team</span></p>
+  </Fragment>
+);
+
+export default Footer;
