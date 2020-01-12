@@ -23,10 +23,6 @@ class Header extends React.Component {
     });
   }
 
-  componentWillUnmount() {
-    window.removeEventListner('scroll');
-  }
-
   navbarToggler = () => {
     this.setState({isHidden: !this.state.isHidden})
   }
@@ -36,7 +32,7 @@ class Header extends React.Component {
     return(
       <nav id='nav' className={`navbar navbar-expand-lg navbar-light ${isScroll ? "scrolled" : null} ${isHidden ? null : 'show'}`}>
         <div className='container'>
-          <img className='navbar-brand' src={Logo} alt='Weeber Logo' />
+          <img onClick={onHomeFocus} className='navbar-brand' src={Logo} alt='Weeber Logo' />
           <button onClick={this.navbarToggler} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <FontAwesomeIcon className={`${isScroll ? "scrolled-icon" : null} ${isHidden ? null : 'show'}`} icon='bars' />
           </button>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import People from '../../assets/img/people-01.png';
 import Button from '../button/button.component';
 
@@ -14,7 +16,9 @@ const Heroes = ({home}) => (
             <h2>We provide web services<br/>for your needs</h2>
           </div>
           <div className='button mt-4'>
-            <Button color='btn-dark-blue'>Get Started</Button>
+            <Link to='/login'>
+              <Button color='btn-dark-blue'>Get Started</Button>
+            </Link>
           </div>
         </div>
 

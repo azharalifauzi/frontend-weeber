@@ -14,25 +14,37 @@ const teams = [
     name: 'Aristia Reyhan',
     role: 'UI Designer',
     imgUrl: Aristia,
-    id: 1
+    id: 1,
+    fbUrl: '',
+    instagramUrl: '',
+    linkedInUrl: ''
   },
   {
     name: 'Bayu Aditya',
     role: 'Backend Developer',
     imgUrl: Bayu,
-    id: 2
+    id: 2,
+    fbUrl: '',
+    instagramUrl: '',
+    linkedInUrl: ''
   },
   {
     name: 'Zhorif Maulana',
     role: 'Frontend Developer',
     imgUrl: Zhorif,
-    id: 3
+    id: 3,
+    fbUrl: '',
+    instagramUrl: '',
+    linkedInUrl: ''
   },
   {
     name: 'Azhar Ali Fauzi',
     role: 'Frontend Developer',
     imgUrl: Ali,
-    id: 4
+    id: 4,
+    fbUrl: 'https://www.facebook.com/azharalifauzi',
+    instagramUrl: 'https://www.instagram.com/azharalifauzi',
+    linkedInUrl: 'https://www.linkedin.com/in/azhar-ali-fauzi-4564a117a'
   },
 ]
 

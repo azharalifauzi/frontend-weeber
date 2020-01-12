@@ -15,7 +15,9 @@ const Footer = ({ contactUs }) => (
         </div>
       </div>
     </div>
-    <p className='copyright'>Designed by <span>Weeber Web Development Team</span></p>
+    <div className='copyright-section'>
+      <p className='copyright'>Designed by <span>Weeber Web Development Team</span></p>
+    </div>
   </Fragment>
 );
 
