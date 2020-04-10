@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Open the Website
 
-The website was hosted on weeber.id
+The website was hosted on https://weeber.id/
 
 ## Available Scripts
 
